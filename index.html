@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal_Journey</title>
+    <link rel="stylesheet" href="style.css">
+        <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.main-section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+
+        function showAboutMeContent(contentId, contentText) {
+            const content = document.getElementById('about-me-content');
+            content.innerHTML = `<h2>${contentId}</h2><p>${contentText}</p>`;
+        }
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>My Personal Journey</h1>
+    <div class="signature">Ismail Ozcan</div>
+</header>
+
+<div class="container">
+    <div class="section" onclick="showSection('about-me')">
+        <img src="../Homework/about me.png" alt="About Me">
+        <h3>About Me</h3>
+    </div>
+    <div class="section" onclick="showSection('my-family')">
+        <img src="../Homework/my_family2.jpg" alt="My Family">
+        <h3>My Family</h3>
+    </div>
+    <div class="section" onclick="showSection('my-travels')">
+        <img src="../Homework/my_travels2.png" alt="My Travels">
+        <h3>My Travels</h3>
+    </div>
+    <div class="section" onclick="showSection('my-contact')">
+        <img src="../Homework/contact.png" alt="My Contact">
+        <h3>My Contact</h3>
+    </div>
+</div>
+
+<div class="main-section" id="about-me">
+    <div class="about-me-header">
+        <div onclick="showAboutMeContent('Education', 'Bachelor of Law (LL.B.) Erzincan(2015/2020), Police Academy: Bachelor in Security Sciences (2006/2010)')">Education</div>
+        <div onclick="showAboutMeContent('Skills', '<h3>Intermediate: CSS, HTML, JavaScript </h3> <p>Beginner: Python</p><h3>Languages: Turkish, English, German </h3>')">Skills</div>
+        <div onclick="showAboutMeContent('Work Experience', '<p>Ministry of Interior, Tecnical Surveillance Specialist (2010/2016)</p><p>Burdur Bar Association Trainee Lawyer (2020/2021)</p><p>Radisas Radiology,Transcriptionist (2020/2022)</p>')">Work Experience</div> 
+        <div onclick="showAboutMeContent('Hobbies','Trekking, Hiking, Football, Reading Books')">Hobbies</div>
+    </div>
+    <div id="about-me-content" class="about-me-content">
+        <h2>Welcome!</h2>
+        <p>Here is Ismail OZCAN's personal journey</p>
+    </div>
+</div>
+
+<div class="main-section" id="my-family">
+  
+    <div class="content-wrapper">
+        <div class="text-section">
+            <p>I am happily married and blessed with two wonderful children.
+                My wife, Meltem, is an English teacher who inspires many with her dedication and passion for education.</p>
+            <p> Our children, Efe and Huma, are not only curious but also enthusiastic about learning coding and exploring the world of technology.</p>
+        </div>
+        <div class="image-section">
+      <img src="../Homework/kisisel (6).jpeg" alt="Family Photo">
+      <span>In Prague</span>
+        </div>
+    </div>
+</div>
+
+<div class="main-section" id="my-travels">
+    <div class="content-wrapper">
+        <div class="text-section">
+            <p>Traveling is one of the best ways to escape the monotony of daily life and create unforgettable memories.</p>
+            <p>I love traveling so much! So far, I have visited 11 countries. I have explored almost every corner of my homeland, Turkey. Besides that, I’ve also been to Switzerland, Germany, Austria, Greece, France, Liechtenstein, Italy, Hungary, the Czech Republic, and Slovakia. Traveling truly brings me peace and happiness.</p>
+        </div>
+        <div class="image-section">
+            <img src="../Homework/Budapest(5).jpeg" alt="Travel Memories">
+            <span>Budapest</span>
+            <img src="../Homework/prag(3).jpeg" alt="Prag">
+            <span>Prague</span>
+        </div>
+    </div>
+</div>
+<div class="main-section" id="my-contact">
+    <p>Email: smail.ozcan16@gmail.com       </p>
+    <p> Phone: +41 77 924 23 10</p>
+    <p> Address: Hofenstrasse 31, 9300 St Gallen</p>
+</div>
+<footer>
+    <p>&copy; 2025 Ismail OZCAN.</p>
+</footer>
+</body>
+</html>
